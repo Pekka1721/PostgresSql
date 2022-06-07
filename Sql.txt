@@ -1,1 +1,10 @@
 Welcome to pSql by  >freecodecamp.org
+
+SQL - Structured Query Language 
+
+> Mangage data held in  a relational database 
+> Easy to learn 
+
+Data is stored in tables
+> Coloumns
+> Rows
