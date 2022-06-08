@@ -1,4 +1,11 @@
-
+create table MOCK_DATA (
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(150),
+	country VARCHAR(50) NOT NULL,
+	date_of_birth DATE NOT NULL
+);
 insert into MOCK_DATA (id, first_name, last_name, email, country, date_of_birth) values (1, 'Bobby', 'Cary', 'bcary0@usnews.com', 'Chile', '2021-09-01');
 insert into MOCK_DATA (id, first_name, last_name, email, country, date_of_birth) values (2, 'Michelina', 'Rodda', null, 'China', '2021-06-23');
 insert into MOCK_DATA (id, first_name, last_name, email, country, date_of_birth) values (3, 'Jacquelynn', 'Bumby', 'jbumby2@state.gov', 'Colombia', '2021-08-17');
