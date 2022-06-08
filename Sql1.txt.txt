@@ -1,0 +1,99 @@
+Creating a Database :
+			CREATE  DATABASE  test_data;
+Creating a Table: 
+			CREATE  TABLE  table_name(
+				Column name + datatype + constraints if any
+				);
+
+Example :
+			CREATE TABLE  person(
+				id int,
+				first_name VARCHAR(50),
+				last_name  VARCHAR(50),
+				gender  VARCHAR(7),
+				date_of_birth DATE );
+
+Check for the documentation of PostgreS for datatypes.
+
+ 
+
+
+
+
+test_data=#  \d                                                ( - for describe table)
+
+
+              List of relations
+ Schema |     Name      |   Type   |  Owner
+--------+---------------+----------+----------
+ public | person        | table    | postgres
+ public | person_id_seq | sequence | postgres
+(2 rows)
+
+
+
+
+test_data=#  \d person
+
+ Table "public.person"
+    Column     |          Type          | Collation | Nullable |              Default
+---------------+------------------------+-----------+----------+------------------------------------
+ id                       | bigint         |                                      | not null | nextval('person_id_seq'::regclass)
+ first_name    | character varying(50)  |           | not null |
+ last_name     | character varying(50)  |           | not null |
+ gender            | character varying(7)    |           | not null |
+ date_of_birth | date                   |                           | not null |
+ email              | character varying(150) |           |                   |
+Indexes:
+    "person_pkey" PRIMARY KEY, btree (id)
+
+
+
+DROP TABLE  person;
+
+Creating NEW tables with constraints 
+
+
+			CREATE TABLE   person(
+				id  BIGSERIAL  NOT NULL  PRIMARY KEY,
+				first_name    VARCHAR(50)   NOT NULL,
+				last_name     VARCHAR(50)   NOT NULL ,
+				gender              VARCHAR(7)   NOT NULL,
+				date_of_birth  DATE 		NOT NULL,
+				email 		VARCHAR(150) 
+					);
+
+BigSerial data type auto increase the id value 
+
+Inserting records into tables:
+person 1;
+
+					INSERT INTO  person(
+						first_name,
+						last_name,
+						gender,
+						date_of_birth)
+					VALUES('Anne', 'Smith', 'Female', Date '1998/01/09);
+
+person2;
+ 					
+						INSERT INTO  person(
+						first_name,
+						last_name,
+						gender,
+						date_of_birth,
+						email)
+					
+				VALUES('Jake', 'Jones', 'Male', Date '1990/01/10, 'jake@gmail.com');
+
+					
+
+
+test_data=#          SELECT * FROM person;
+
+
+ id | first_name | last_name | gender | date_of_birth |     email
+----+------------+-----------+--------+---------------+----------------
+  1 | Jake       | Jones     | Male   | 1998-08-09    |
+  2 | Anne       | Smith     | Female | 1988-01-09    | anne@gmail.com
+(2 rows)
