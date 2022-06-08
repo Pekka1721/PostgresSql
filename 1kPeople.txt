@@ -1,0 +1,87 @@
+Adding 1k people into Table 
+
+Generate data of people from       Mackaroo.com
+using cmd navigate to the Mockdata.sql 
+
+Create a table with following constraints
+
+
+	create table MOCK_DATA (
+
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(150),
+	country VARCHAR(50) NOT NULL,
+	date_of_birth DATE NOT NULL
+);
+
+
+Check for the table rows
+
+test_data=#          select * from mock_data;
+ id | first_name | last_name | email | gender | country | date_of_birth
+----+------------+-----------+-------+--------+---------+---------------
+(0 rows)
+
+Table is created with the following constriants.
+
+Insert the data of 1000 people into the table 
+
+INSERT INTO  mock_data(id , first_name, last_name, email, gender,country, date_of_birth)
+VALUES();
+
+using the above two lines of sql command.
+
+1000 peoples of data is uploaded into table named  mock_data.
+
+Check for the data.
+
+test_data=# SELECT*FROM mock_data;
+
+
+  id  |   first_name   |     last_name     |               email               |             country              | date_of_birth
+------+----------------+-------------------+-----------------------------------+----------------------------------+---------------
+    1 | Bobby          | Cary              | bcary0@usnews.com                 | Chile                            | 2021-09-01
+    2 | Michelina      | Rodda             |                                   | China                            | 2021-06-23
+    3 | Jacquelynn     | Bumby             | jbumby2@state.gov                 | Colombia                         | 2021-08-17
+    4 | Carling        | Gredden           | cgredden3@phoca.cz                | China                            | 2022-05-15
+    5 | Phyllys        | Rignold           | prignold4@time.com                | Nicaragua                        | 2022-03-06
+    6 | Retha          | Scoles            |                                   | Poland                           | 2022-05-06
+    7 | Bobette        | Annwyl            | bannwyl6@hhs.gov                  | Nigeria                          | 2021-07-22
+    8 | Ty             | Dalling           | tdalling7@sciencedaily.com        | Russia                           | 2021-09-03
+    9 | Ruggiero       | Clint             | rclint8@parallels.com             | Indonesia                        | 2021-11-14
+   10 | Ruggiero       | MacFie            |                                   | France                           | 2022-05-23
+   11 | Inesita        | Rivaland          | irivalanda@scientificamerican.com | Philippines                      | 2021-07-21
+   12 | Vinni          | Olney             | volneyb@sciencedaily.com          | Malaysia                         | 2021-12-23
+   13 | Marchelle      | Meeke             | mmeekec@dell.com                  | Paraguay                         | 2021-09-18
+   14 | Rodney         | Cay               | rcayd@homestead.com               | Malaysia                         | 2022-02-26
+   15 | Prissie        | Revitt            |                                   | China                            | 2021-07-02
+   16 | Keene          | Ledward           | kledwardf@redcross.org            | South Africa                     | 2021-06-25
+   17 | Madlen         | Harvie            |                                   | Colombia                         | 2021-08-05
+   18 | Eddy           | Sawley            | esawleyh@bing.com                 | China                            | 2022-02-02
+   19 | Thibaut        | Coltherd          |                                   | Tajikistan                       | 2022-03-27
+   20 | Charisse       | Totaro            | ctotaroj@msn.com                  | Philippines                      | 2021-07-29
+   21 | Kristal        | Rudolfer          | krudolferk@hexun.com              | Rwanda                           | 2021-11-18
+   22 | Coraline       | Rudkin            | crudkinl@mapy.cz                  | Canada                           | 2021-09-28
+-- More  --
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
