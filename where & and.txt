@@ -1,0 +1,124 @@
+WHERE  clause allows us to filter based on coloum
+
+SELECT * FROM mock_data WHERE  country ='Poland';
+
+
+test_data=# SELECT * FROM mock_data WHERE country ='Poland';
+
+
+ id  | first_name |  last_name  |              email              | country | date_of_birth
+-----+------------+-------------+---------------------------------+---------+---------------
+   6 | Retha      | Scoles      |                                 | Poland  | 2022-05-06
+  26 | Danya      | Gresty      | dgrestyp@a8.net                 | Poland  | 2022-03-27
+  44 | Nanette    | Aggett      | naggett17@irs.gov               | Poland  | 2021-10-07
+  52 | Freida     | Blacklock   | fblacklock1f@simplemachines.org | Poland  | 2021-06-11
+  59 | Chelsae    | Rubinshtein | crubinshtein1m@reddit.com       | Poland  | 2021-12-12
+  69 | Graham     | Portigall   | gportigall1w@diigo.com          | Poland  | 2021-10-17
+  70 | Hetti      | Kirkby      |                                 | Poland  | 2022-01-13
+  92 | Levey      | Merfin      | lmerfin2j@bizjournals.com       | Poland  | 2021-12-29
+ 128 | Terrijo    | Story       | tstory3j@slate.com              | Poland  | 2021-12-04
+ 153 | Carmelita  | Woolfitt    | cwoolfitt48@godaddy.com         | Poland  | 2021-09-19
+ 163 | Arabella   | Blakiston   |                                 | Poland  | 2022-04-21
+ 164 | Killian    | Brinson     |                                 | Poland  | 2021-07-06
+ 184 | Melony     | Boyan       |                                 | Poland  | 2022-03-18
+ 206 | Batholomew | Grayer      | bgrayer5p@nbcnews.com           | Poland  | 2021-10-02
+ 212 | Rasla      | Hembrow     | rhembrow5v@examiner.com         | Poland  | 2021-11-25
+ 262 | Annissa    | Bendelow    | abendelow79@edublogs.org        | Poland  | 2022-06-06
+ 266 | Charlie    | Brisson     | cbrisson7d@issuu.com            | Poland  | 2022-01-13
+ 269 | Julienne   | Luty        | jluty7g@chicagotribune.com      | Poland  | 2022-04-30
+ 287 | Deloris    | Goldup      |                                 | Poland  | 2021-10-31
+ 288 | Glynn      | Goldie      | ggoldie7z@123-reg.co.uk         | Poland  | 2021-07-16
+ 383 | Andreas    | Tregidgo    | atregidgoam@timesonline.co.uk   | Poland  | 2022-02-22
+ 391 | Etta       | Newhouse    |                                 | Poland  | 2022-03-30
+ 459 | Linnell    | Sargent     | lsargentcq@meetup.com           | Poland  | 2022-05-18
+ 498 | Felipa     | Nisuis      |                                 | Poland  | 2021-11-05
+ 502 | Powell     | Doiley      | pdoileydx@naver.com             | Poland  | 2021-08-08
+ 511 | Sherri     | Ridings     | sridingse6@tumblr.com           | Poland  | 2022-05-24
+ 512 | Cyndi      | Seed        |                                 | Poland  | 2022-02-01
+ 533 | Dwayne     | Dyneley     |                                 | Poland  | 2022-01-20
+ 591 | Amalita    | Breeder     |                                 | Poland  | 2022-03-04
+ 610 | Humfrid    | Feldmann    | hfeldmanngx@slideshare.net      | Poland  | 2021-08-20
+ 615 | Beilul     | Loddon      |                                 | Poland  | 2021-08-08
+ 617 | Reuven     | Potter      |                                 | Poland  | 2021-11-30
+ 675 | Wald       | Engelmann   | wengelmanniq@amazon.co.jp       | Poland  | 2022-03-25
+ 679 | Augy       | Hargreaves  | ahargreavesiu@over-blog.com     | Poland  | 2022-02-20
+ 681 | Babette    | Spackman    | bspackmaniw@slashdot.org        | Poland  | 2021-10-05
+ 700 | Darcey     | Handmore    | dhandmorejf@merriam-webster.com | Poland  | 2021-09-11
+ 708 | Katrine    | Fancutt     | kfancuttjn@barnesandnoble.com   | Poland  | 2021-08-04
+ 716 | Des        | Robardey    |                                 | Poland  | 2021-06-20
+ 741 | Torie      | O'Doghesty  | todoghestykk@hao123.com         | Poland  | 2022-03-07
+ 751 | Nealon     | Midner      | nmidnerku@amazon.de             | Poland  | 2021-10-02
+ 753 | Helena     | Hofton      |                                 | Poland  | 2022-01-09
+ 816 | Karlotte   | Meaton      | kmeatonmn@blog.com              | Poland  | 2021-09-17
+ 817 | Vitia      | Pessold     | vpessoldmo@cdbaby.com           | Poland  | 2021-12-07
+ 833 | Magda      | Ruffli      | mrufflin4@census.gov            | Poland  | 2021-11-12
+ 852 | Riva       | Backwell    |                                 | Poland  | 2021-09-02
+ 886 | Isidore    | MacGall     | imacgallol@ameblo.jp            | Poland  | 2021-10-21
+ 890 | Bamby      | O'Kieran    | bokieranop@biglobe.ne.jp        | Poland  | 2021-10-13
+ 936 | Spike      | Pedrielli   | spedriellipz@statcounter.com    | Poland  | 2021-12-24
+ 938 | Tami       | Fazan       | tfazanq1@rakuten.co.jp          | Poland  | 2021-06-12
+ 945 | Alane      | Hannah      | ahannahq8@imageshack.us         | Poland  | 2021-09-04
+ 947 | Ceciley    | Sturley     | csturleyqa@usa.gov              | Poland  | 2022-05-23
+ 954 | Pepito     | Colliar     | pcolliarqh@wordpress.com        | Poland  | 2022-05-16
+(52 rows)
+
+
+
+
+test_data=# 		SELECT * FROM mock_data WHERE country ='China' OR country = 'Poland';
+
+
+
+
+
+ id  | first_name  |  last_name   |               email               | country | date_of_birth
+-----+-------------+--------------+-----------------------------------+---------+---------------
+   2 | Michelina   | Rodda        |                                   | China   | 2021-06-23
+   4 | Carling     | Gredden      | cgredden3@phoca.cz                | China   | 2022-05-15
+   6 | Retha       | Scoles       |                                   | Poland  | 2022-05-06
+  15 | Prissie     | Revitt       |                                   | China   | 2021-07-02
+  18 | Eddy        | Sawley       | esawleyh@bing.com                 | China   | 2022-02-02
+  24 | Arturo      | Gronav       | agronavn@goo.gl                   | China   | 2022-03-30
+  26 | Danya       | Gresty       | dgrestyp@a8.net                   | Poland  | 2022-03-27
+  37 | Katharine   | Mullally     | kmullally10@spiegel.de            | China   | 2022-03-25
+  44 | Nanette     | Aggett       | naggett17@irs.gov                 | Poland  | 2021-10-07
+  45 | Boris       | Wileman      | bwileman18@howstuffworks.com      | China   | 2022-04-19
+  47 | Geri        | Brekonridge  | gbrekonridge1a@cornell.edu        | China   | 2022-04-28
+  52 | Freida      | Blacklock    | fblacklock1f@simplemachines.org   | Poland  | 2021-06-11
+  54 | Garwin      | Radclyffe    | gradclyffe1h@free.fr              | China   | 2021-08-06
+  57 | Olivero     | Batterson    | obatterson1k@usgs.gov             | China   | 2021-12-08
+  59 | Chelsae     | Rubinshtein  | crubinshtein1m@reddit.com         | Poland  | 2021-12-12
+  69 | Graham      | Portigall    | gportigall1w@diigo.com            | Poland  | 2021-10-17
+  70 | Hetti       | Kirkby       |                                   | Poland  | 2022-01-13
+  71 | Rosetta     | Joerning     | rjoerning1y@unesco.org            | China   | 2021-11-04
+  78 | Fidel       | Dadley       | fdadley25@hubpages.com            | China   | 2022-01-08
+  79 | Bonita      | Wiszniewski  | bwiszniewski26@eepurl.com         | China   | 2021-09-07
+  81 | Ora         | Krojn        |                                   | China   | 2021-11-18
+  84 | Elfreda     | Rubinowicz   |                                   | China   | 2022-04-20
+  87 | Silvie      | Itzkovsky    | sitzkovsky2e@jugem.jp             | China   | 2022-03-19
+  89 | Rhea        | Balden       | rbalden2g@cdc.gov                 | China   | 2021-07-14
+  92 | Levey       | Merfin       | lmerfin2j@bizjournals.com         | Poland  | 2021-12-29
+  93 | Wilma       | Gartery      | wgartery2k@ucoz.com               | China   | 2022-04-20
+  98 | Milt        | Storks       |                                   | China   | 2022-02-09
+  99 | Inge        | Comi         |                                   | China   | 2022-02-04
+ 101 | Danica      | Kasting      | dkasting2s@google.ru              | China   | 2021-12-10
+ 105 | Rice        | Emms         | remms2w@comcast.net               | China   | 2022-05-12
+ 107 | Nevile      | Corneliussen | ncorneliussen2y@shop-pro.jp       | China   | 2021-10-28
+ 116 | Simeon      | Gullick      | sgullick37@google.com.au          | China   | 2022-03-14
+ 128 | Terrijo     | Story        | tstory3j@slate.com                | Poland  | 2021-12-04
+ 131 | Ellissa     | Jillions     | ejillions3m@wired.com             | China   | 2022-05-05
+ 132 | Blayne      | Gerbl        | bgerbl3n@ucsd.edu                 | China   | 2022-05-06
+ 133 | Arney       | Deetlefs     | adeetlefs3o@stanford.edu          | China   | 2022-02-05
+ 137 | Shane       | Kenn         | skenn3s@edublogs.org              | China   | 2021-11-09
+ 149 | Aindrea     | Lougheed     | alougheed44@multiply.com          | China   | 2021-06-15
+ 150 | Babette     | Mowen        | bmowen45@ft.com                   | China   | 2021-07-23
+ 153 | Carmelita   | Woolfitt     | cwoolfitt48@godaddy.com           | Poland  | 2021-09-19
+ 155 | Nola        | Delicate     | ndelicate4a@admin.ch              | China   | 2022-04-24
+ 160 | Sandor      | Otto         | sotto4f@dot.gov                   | China   | 2021-11-15
+ 163 | Arabella    | Blakiston    |                                   | Poland  | 2022-04-21
+ 164 | Killian     | Brinson      |                                   | Poland  | 2021-07-06
+ 165 | Brig        | Simoes       | bsimoes4k@wikipedia.org           | China   | 2021-06-23
+ 168 | Dun         | Jex          | djex4n@netlog.com                 | China   | 2021-06-20
+
+ We can use AND operator
+

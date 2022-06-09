@@ -1,0 +1,244 @@
+test_data=#		 SELECT * FROM mock_data LIMIT 5;
+ id | first_name | last_name |       email        |  country  | date_of_birth
+----+------------+-----------+--------------------+-----------+---------------
+  1 | Bobby      | Cary      | bcary0@usnews.com  | Chile     | 2021-09-01
+  2 | Michelina  | Rodda     |                    | China     | 2021-06-23
+  3 | Jacquelynn | Bumby     | jbumby2@state.gov  | Colombia  | 2021-08-17
+  4 | Carling    | Gredden   | cgredden3@phoca.cz | China     | 2022-05-15
+  5 | Phyllys    | Rignold   | prignold4@time.com | Nicaragua | 2022-03-06
+
+
+
+test_data=#       SELECT * FROM mock_data OFFSET 5 LIMIT 5;
+ id | first_name | last_name |           email            |  country  | date_of_birth
+----+------------+-----------+----------------------------+-----------+---------------
+  6 | Retha      | Scoles    |                            | Poland    | 2022-05-06
+  7 | Bobette    | Annwyl    | bannwyl6@hhs.gov           | Nigeria   | 2021-07-22
+  8 | Ty         | Dalling   | tdalling7@sciencedaily.com | Russia    | 2021-09-03
+  9 | Ruggiero   | Clint     | rclint8@parallels.com      | Indonesia | 2021-11-14
+ 10 | Ruggiero   | MacFie    |                            | France    | 2022-05-23
+(5 rows)
+
+
+                                                        ^
+test_data=#        SELECT * FROM mock_data OFFSET 5 FETCH FIRST 10 ROW ONLY;
+ id | first_name | last_name |               email               |   country   | date_of_birth
+----+------------+-----------+-----------------------------------+-------------+---------------
+  6 | Retha      | Scoles    |                                   | Poland      | 2022-05-06
+  7 | Bobette    | Annwyl    | bannwyl6@hhs.gov                  | Nigeria     | 2021-07-22
+  8 | Ty         | Dalling   | tdalling7@sciencedaily.com        | Russia      | 2021-09-03
+  9 | Ruggiero   | Clint     | rclint8@parallels.com             | Indonesia   | 2021-11-14
+ 10 | Ruggiero   | MacFie    |                                   | France      | 2022-05-23
+ 11 | Inesita    | Rivaland  | irivalanda@scientificamerican.com | Philippines | 2021-07-21
+ 12 | Vinni      | Olney     | volneyb@sciencedaily.com          | Malaysia    | 2021-12-23
+ 13 | Marchelle  | Meeke     | mmeekec@dell.com                  | Paraguay    | 2021-09-18
+ 14 | Rodney     | Cay       | rcayd@homestead.com               | Malaysia    | 2022-02-26
+ 15 | Prissie    | Revitt    |                                   | China       | 2021-07-02
+(10 rows)
+
+test_data=# SELECT *
+test_data-# FROM mock_data
+test_data-# WHERE country IN('China','Brazil','Mexico', 'Portugal','Nigeria');
+
+
+
+ id  | first_name  |     last_name     |               email               | country  | date_of_birth
+-----+-------------+-------------------+-----------------------------------+----------+---------------
+   2 | Michelina   | Rodda             |                                   | China    | 2021-06-23
+   4 | Carling     | Gredden           | cgredden3@phoca.cz                | China    | 2022-05-15
+   7 | Bobette     | Annwyl            | bannwyl6@hhs.gov                  | Nigeria  | 2021-07-22
+  15 | Prissie     | Revitt            |                                   | China    | 2021-07-02
+  18 | Eddy        | Sawley            | esawleyh@bing.com                 | China    | 2022-02-02
+  24 | Arturo      | Gronav            | agronavn@goo.gl                   | China    | 2022-03-30
+  27 | Brinna      | Hammerman         |                                   | Brazil   | 2021-12-13
+  36 | Fleur       | Hull              | fhullz@stanford.edu               | Brazil   | 2021-08-25
+  37 | Katharine   | Mullally          | kmullally10@spiegel.de            | China    | 2022-03-25
+  45 | Boris       | Wileman           | bwileman18@howstuffworks.com      | China    | 2022-04-19
+  47 | Geri        | Brekonridge       | gbrekonridge1a@cornell.edu        | China    | 2022-04-28
+  54 | Garwin      | Radclyffe         | gradclyffe1h@free.fr              | China    | 2021-08-06
+  57 | Olivero     | Batterson         | obatterson1k@usgs.gov             | China    | 2021-12-08
+  71 | Rosetta     | Joerning          | rjoerning1y@unesco.org            | China    | 2021-11-04
+  78 | Fidel       | Dadley            | fdadley25@hubpages.com            | China    | 2022-01-08
+  79 | Bonita      | Wiszniewski       | bwiszniewski26@eepurl.com         | China    | 2021-09-07
+  81 | Ora         | Krojn             |                                   | China    | 2021-11-18
+  84 | Elfreda     | Rubinowicz        |                                   | China    | 2022-04-20
+  85 | Nariko      | Sedgefield        |                                   | Brazil   | 2021-07-21
+  87 | Silvie      | Itzkovsky         | sitzkovsky2e@jugem.jp             | China    | 2022-03-19
+  89 | Rhea        | Balden            | rbalden2g@cdc.gov                 | China    | 2021-07-14
+  93 | Wilma       | Gartery           | wgartery2k@ucoz.com               | China    | 2022-04-20
+  95 | Kip         | Beevens           | kbeevens2m@ucoz.com               | Brazil   | 2021-06-13
+  98 | Milt        | Storks            |                                   | China    | 2022-02-09
+  99 | Inge        | Comi              |                                   | China    | 2022-02-04
+ 101 | Danica      | Kasting           | dkasting2s@google.ru              | China    | 2021-12-10
+ 105 | Rice        | Emms              | remms2w@comcast.net               | China    | 2022-05-12
+ 106 | Corbett     | MacLennan         | cmaclennan2x@smh.com.au           | Portugal | 2022-04-07
+ 107 | Nevile      | Corneliussen      | ncorneliussen2y@shop-pro.jp       | China    | 2021-10-28
+ 113 | Luella      | Seamans           | lseamans34@hp.com                 | Brazil   | 2022-05-08
+ 116 | Simeon      | Gullick           | sgullick37@google.com.au          | China    | 2022-03-14
+ 118 | Levi        | Hustler           | lhustler39@dyndns.org             | Mexico   | 2021-06-28
+ 131 | Ellissa     | Jillions          | ejillions3m@wired.com             | China    | 2022-05-05
+ 132 | Blayne      | Gerbl             | bgerbl3n@ucsd.edu                 | China    | 2022-05-06
+ 133 | Arney       | Deetlefs          | adeetlefs3o@stanford.edu          | China    | 2022-02-05
+ 137 | Shane       | Kenn              | skenn3s@edublogs.org              | China    | 2021-11-09
+ 139 | Eve         | Burkinshaw        | eburkinshaw3u@1688.com            | Brazil   | 2021-11-24
+ 147 | Alasdair    | Foxon             |                                   | Portugal | 2022-06-01
+ 149 | Aindrea     | Lougheed          | alougheed44@multiply.com          | China    | 2021-06-15
+ 150 | Babette     | Mowen             | bmowen45@ft.com                   | China    | 2021-07-23
+ 151 | Judas       | Dunster           | jdunster46@goodreads.com          | Portugal | 2021-06-22
+ 155 | Nola        | Delicate          | ndelicate4a@admin.ch              | China    | 2022-04-24
+ 160 | Sandor      | Otto              | sotto4f@dot.gov                   | China    | 2021-11-15
+ 165 | Brig        | Simoes            | bsimoes4k@wikipedia.org           | China    | 2021-06-23
+ 168 | Dun         | Jex               | djex4n@netlog.com                 | China    | 2021-06-20
+ 169 | Hyacinth    | Fideler           | hfideler4o@army.mil               | China    | 2022-02-08
+ 172 | Kellen      | Pullman           |                                   | Portugal | 2022-03-25
+ 176 | Terrence    | Cassel            | tcassel4v@cnet.com                | China    | 2021-10-10
+ 182 | Shaina      | Ponsford          | sponsford51@ucoz.com              | China    | 2022-05-27
+ 183 | Sandy       | Blasgen           | sblasgen52@themeforest.net        | China    | 2021-08-19
+ 186 | Yolane      | Macourek          | ymacourek55@miitbeian.gov.cn      | China    | 2022-05-28
+ 188 | Jeno        | Gianinotti        | jgianinotti57@cafepress.com       | China    | 2021-06-08
+ 195 | Ginnifer    | Copcott           | gcopcott5e@so-net.ne.jp           | China    | 2022-05-27
+ 204 | Dorey       | Godball           | dgodball5n@narod.ru               | Portugal | 2021-11-26
+ 208 | Rhodie      | Poxton            | rpoxton5r@ucoz.com                | China    | 2022-05-30
+ 214 | Ariel       | McCowan           | amccowan5x@diigo.com              | China    | 2021-10-01
+ 220 | Betteanne   | Bladge            | bbladge63@edublogs.org            | Portugal | 2022-05-22
+ 221 | Madelaine   | Purkis            |                                   | China    | 2022-03-14
+ 230 | Orelle      | Doggerell         | odoggerell6d@yellowbook.com       | Brazil   | 2022-06-05
+ 231 | Van         | Henniger          | vhenniger6e@mapy.cz               | China    | 2021-10-22
+ 234 | Tobit       | Cordelette        |                                   | Portugal | 2021-10-15
+ 235 | Iseabal     | Hallagan          | ihallagan6i@wunderground.com      | China    | 2022-05-22
+ 236 | Christy     | Rubin             | crubin6j@buzzfeed.com             | Brazil   | 2021-10-16
+
+
+using BETWEEN to find data in a range 
+
+test_data=#	 SELECT * FROM mock_data
+test_data-#	 WHERE date_of_birth
+test_data-#	 BETWEEN DATE '2020-01-01' AND '2022-01-01';
+  id  |   first_name   |   last_name   |               email               |             country              | date_of_birth
+------+----------------+---------------+-----------------------------------+----------------------------------+---------------
+    1 | Bobby          | Cary          | bcary0@usnews.com                 | Chile                            | 2021-09-01
+    2 | Michelina      | Rodda         |                                   | China                            | 2021-06-23
+    3 | Jacquelynn     | Bumby         | jbumby2@state.gov                 | Colombia                         | 2021-08-17
+    7 | Bobette        | Annwyl        | bannwyl6@hhs.gov                  | Nigeria                          | 2021-07-22
+    8 | Ty             | Dalling       | tdalling7@sciencedaily.com        | Russia                           | 2021-09-03
+    9 | Ruggiero       | Clint         | rclint8@parallels.com             | Indonesia                        | 2021-11-14
+   11 | Inesita        | Rivaland      | irivalanda@scientificamerican.com | Philippines                      | 2021-07-21
+   12 | Vinni          | Olney         | volneyb@sciencedaily.com          | Malaysia                         | 2021-12-23
+   13 | Marchelle      | Meeke         | mmeekec@dell.com                  | Paraguay                         | 2021-09-18
+   15 | Prissie        | Revitt        |                                   | China                            | 2021-07-02
+   16 | Keene          | Ledward       | kledwardf@redcross.org            | South Africa                     | 2021-06-25
+   17 | Madlen         | Harvie        |                                   | Colombia                         | 2021-08-05
+   20 | Charisse       | Totaro        | ctotaroj@msn.com                  | Philippines                      | 2021-07-29
+   21 | Kristal        | Rudolfer      | krudolferk@hexun.com              | Rwanda                           | 2021-11-18
+   22 | Coraline       | Rudkin        | crudkinl@mapy.cz                  | Canada                           | 2021-09-28
+   27 | Brinna         | Hammerman     |                                   | Brazil                           | 2021-12-13
+   28 | Loria          | Penas         | lpenasr@state.gov                 | Yemen                            | 2021-07-30
+   29 | Poul           | Argent        | pargents@ifeng.com                | Czech Republic                   | 2021-09-30
+   30 | Huberto        | Farran        |                                   | Indonesia                        | 2021-08-03
+   31 | Bertie         | Pawley        |                                   | Vietnam                          | 2021-07-19
+   34 | Delaney        | Kenyon        | dkenyonx@house.gov                | Thailand                         | 2021-11-03
+   36 | Fleur          | Hull          | fhullz@stanford.edu               | Brazil                           | 2021-08-25
+   38 | Dominga        | Cowpe         | dcowpe11@merriam-webster.com      | Italy                            | 2021-11-19
+   40 | George         | Ortzen        | gortzen13@gravatar.com            | Indonesia                        | 2021-11-28
+   41 | Daisie         | Hourstan      | dhourstan14@statcounter.com       | Indonesia                        | 2021-10-14
+   42 | Cobby          | Nibloe        | cnibloe15@geocities.jp            | Belarus                          | 2021-06-17
+   43 | Kristen        | Ivett         | kivett16@constantcontact.com      | France                           | 2022-01-01
+   44 | Nanette        | Aggett        | naggett17@irs.gov                 | Poland                           | 2021-10-07
+   46 | Beverly        | Rheam         |                                   | Japan                            | 2021-11-27
+   48 | Valeda         | Collman       | vcollman1b@joomla.org             | Indonesia                        | 2021-06-18
+   49 | Anica          | Janca         | ajanca1c@google.com.br            | Saint Vincent and the Grenadines | 2021-07-01
+   51 | Florri         | Keeves        |                                   | Japan                            | 2021-11-19
+   52 | Freida         | Blacklock     | fblacklock1f@simplemachines.org   | Poland                           | 2021-06-11
+   53 | Adrian         | Myrick        | amyrick1g@jalbum.net              | Botswana                         | 2021-10-27
+   54 | Garwin         | Radclyffe     | gradclyffe1h@free.fr              | China                            | 2021-08-06
+   56 | Kacy           | Golthorpp     | kgolthorpp1j@fda.gov              | Indonesia                        | 2021-08-06
+   57 | Olivero        | Batterson     | obatterson1k@usgs.gov             | China                            | 2021-12-08
+   59 | Chelsae        | Rubinshtein   | crubinshtein1m@reddit.com         | Poland                           | 2021-12-12
+   62 | Bert           | Yuryaev       | byuryaev1p@skype.com              | Indonesia                        | 2021-07-26
+   65 | Kellby         | Husband       | khusband1s@cpanel.net             | Mauritius                        | 2021-12-08
+   69 | Graham         | Portigall     | gportigall1w@diigo.com            | Poland                           | 2021-10-17
+   71 | Rosetta        | Joerning      | rjoerning1y@unesco.org            | China                            | 2021-11-04
+   75 | Chelsae        | Jamson        | cjamson22@clickbank.net           | Russia                           | 2021-06-17
+   76 | Mattias        | Paddick       |                                   | Indonesia                        | 2021-12-17
+   79 | Bonita         | Wiszniewski   | bwiszniewski26@eepurl.com         | China                            | 2021-09-07
+   80 | Moyna          | MacCoveney    | mmaccoveney27@blogs.com           | France                           | 2021-10-02
+-- More  --
+
+
+using  LIKE  to find some emails with same ending
+
+test_data=#      SELECT * FROM mock_data WHERE email LIKE '%.com';
+
+
+ id  | first_name  |     last_name     |               email               |         country          | date_of_birth
+-----+-------------+-------------------+-----------------------------------+--------------------------+---------------
+   1 | Bobby       | Cary              | bcary0@usnews.com                 | Chile                    | 2021-09-01
+   5 | Phyllys     | Rignold           | prignold4@time.com                | Nicaragua                | 2022-03-06
+   8 | Ty          | Dalling           | tdalling7@sciencedaily.com        | Russia                   | 2021-09-03
+   9 | Ruggiero    | Clint             | rclint8@parallels.com             | Indonesia                | 2021-11-14
+  11 | Inesita     | Rivaland          | irivalanda@scientificamerican.com | Philippines              | 2021-07-21
+  12 | Vinni       | Olney             | volneyb@sciencedaily.com          | Malaysia                 | 2021-12-23
+  13 | Marchelle   | Meeke             | mmeekec@dell.com                  | Paraguay                 | 2021-09-18
+  14 | Rodney      | Cay               | rcayd@homestead.com               | Malaysia                 | 2022-02-26
+  18 | Eddy        | Sawley            | esawleyh@bing.com                 | China                    | 2022-02-02
+  20 | Charisse    | Totaro            | ctotaroj@msn.com                  | Philippines              | 2021-07-29
+  21 | Kristal     | Rudolfer          | krudolferk@hexun.com              | Rwanda                   | 2021-11-18
+  23 | Giacinta    | Haysham           | ghayshamm@kickstarter.com         | Indonesia                | 2022-02-07
+  29 | Poul        | Argent            | pargents@ifeng.com                | Czech Republic           | 2021-09-30
+  32 | Eirena      | Griffe            | egriffev@typepad.com              | Russia                   | 2022-02-25
+  38 | Dominga     | Cowpe             | dcowpe11@merriam-webster.com      | Italy                    | 2021-11-19
+  40 | George      | Ortzen            | gortzen13@gravatar.com            | Indonesia                | 2021-11-28
+  41 | Daisie      | Hourstan          | dhourstan14@statcounter.com       | Indonesia                | 2021-10-14
+  43 | Kristen     | Ivett             | kivett16@constantcontact.com      | France                   | 2022-01-01
+  45 | Boris       | Wileman           | bwileman18@howstuffworks.com      | China                    | 2022-04-19
+  50 | Kiersten    | Calken            | kcalken1d@sohu.com                | Indonesia                | 2022-06-07
+  55 | Cloe        | Slyme             | cslyme1i@technorati.com           | Spain                    | 2022-02-22
+  59 | Chelsae     | Rubinshtein       | crubinshtein1m@reddit.com         | Poland                   | 2021-12-12
+
+
+
+test_data=# 			
+		 SELECT * FROM mock_data WHERE email LIKE '%reddit.com';
+ id  | first_name |  last_name  |           email           |    country     | date_of_birth
+-----+------------+-------------+---------------------------+----------------+---------------
+  59 | Chelsae    | Rubinshtein | crubinshtein1m@reddit.com | Poland         | 2021-12-12
+ 279 | Marcelo    | Cresar      | mcresar7q@reddit.com      | American Samoa | 2022-02-17
+(2 rows)
+
+
+test_data=#          
+                             SELECT * FROM mock_data WHERE email LIKE '%reddit.com';
+ id  | first_name |  last_name  |           email           |    country     | date_of_birth
+-----+------------+-------------+---------------------------+----------------+---------------
+  59 | Chelsae    | Rubinshtein | crubinshtein1m@reddit.com | Poland         | 2021-12-12
+ 279 | Marcelo    | Cresar      | mcresar7q@reddit.com      | American Samoa | 2022-02-17
+(2 rows)
+
+
+
+
+
+test_data=#        
+		
+			SELECT * FROM mock_data WHERE email LIKE '______@%';
+
+
+ id  | first_name | last_name |           email           |    country    | date_of_birth
+-----+------------+-----------+---------------------------+---------------+---------------
+   1 | Bobby      | Cary      | bcary0@usnews.com         | Chile         | 2021-09-01
+  36 | Fleur      | Hull      | fhullz@stanford.edu       | Brazil        | 2021-08-25
+ 168 | Dun        | Jex       | djex4n@netlog.com         | China         | 2021-06-20
+ 199 | Ashely     | Try       | atry5i@huffingtonpost.com | Japan         | 2022-01-31
+ 254 | Diannne    | Top       | dtop71@sfgate.com         | Colombia      | 2022-01-12
+ 398 | Hadleigh   | Roj       | hrojb1@liveinternet.ru    | China         | 2022-01-28
+ 400 | Salli      | Oen       | soenb3@indiegogo.com      | China         | 2022-02-05
+ 490 | Alberik    | Ham       | ahamdl@naver.com          | China         | 2021-10-25
+ 732 | Pinchas    | Yes       | pyeskb@drupal.org         | Gabon         | 2021-12-02
+ 790 | Delano     | Doy       | ddoylx@theguardian.com    | Afghanistan   | 2021-07-08
+ 796 | Willabella | Ife       | wifem3@google.de          | United States | 2021-06-17
+(11 rows)
+
+
+Use ILIKE key word to avoid case sensitive words
+
+

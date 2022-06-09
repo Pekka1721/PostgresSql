@@ -66,19 +66,349 @@ test_data=# SELECT*FROM mock_data;
    22 | Coraline       | Rudkin            | crudkinl@mapy.cz                  | Canada                           | 2021-09-28
 -- More  --
 
+Sorting data by ORDER BY 	command
+
+
+Sorting the data using the country in ASC order ;
 
 
 
 
 
+test_data=# SELECT * FROM mock_data ORDER BY country ASC;
+
+
+
+  id  |   first_name   |     last_name     |               email               |             country              | date_of_birth
+------+----------------+-------------------+-----------------------------------+----------------------------------+---------------
+  590 | Nikita         | Selborne          | nselbornegd@mapquest.com          | Afghanistan                      | 2021-09-19
+  270 | Yalonda        | Doumer            | ydoumer7h@opera.com               | Afghanistan                      | 2022-05-09
+  640 | Liesa          | Pershouse         | lpershousehr@nba.com              | Afghanistan                      | 2021-07-05
+  790 | Delano         | Doy               | ddoylx@theguardian.com            | Afghanistan                      | 2021-07-08
+  463 | Hannie         | Jumeau            | hjumeaucu@123-reg.co.uk           | Afghanistan                      | 2022-04-17
+  707 | Laurice        | O'Shee            |                                   | Afghanistan                      | 2021-08-01
+  520 | Rebekkah       | Steaning          |                                   | Albania                          | 2021-06-23
+  189 | Nigel          | Soigne            | nsoigne58@rediff.com              | Albania                          | 2021-07-12
+  973 | Arabele        | Sybe              | asyber0@imdb.com                  | Albania                          | 2021-12-16
+  279 | Marcelo        | Cresar            | mcresar7q@reddit.com              | American Samoa                   | 2022-02-17
+  338 | Brucie         | Salzberger        |                                   | Argentina                        | 2021-08-24
+  691 | Cleo           | Renfree           | crenfreej6@merriam-webster.com    | Argentina                        | 2022-01-13
+  379 | Kendricks      | Walsham           | kwalshamai@alibaba.com            | Argentina                        | 2021-06-11
+  967 | Kellsie        | Dericot           | kdericotqu@hud.gov                | Argentina                        | 2021-09-25
+  900 | Carissa        | Walasik           |                                   | Argentina                        | 2022-03-13
+ 1000 | Lucius         | Sautter           |                                   | Argentina                        | 2021-08-25
+  191 | Rafe           | Folds             |                                   | Argentina                        | 2021-08-07
+  616 | Ferdie         | Rowbrey           |                                   | Argentina                        | 2022-05-09
+  124 | Gael           | Eykelhof          | geykelhof3f@people.com.cn         | Argentina                        | 2021-06-29
+  814 | Vinni          | Brewse            | vbrewseml@hc360.com               | Argentina                        | 2021-12-27
+  748 | Madeline       | Yearby            | myearbykr@etsy.com                | Argentina                        | 2021-10-21
+  771 | Josie          | Kew               |                                   | Argentina                        | 2021-06-30
+  211 | Randolf        | Evanson           | revanson5u@ucoz.ru                | Argentina                        | 2021-08-20
+  374 | Vail           | Lerner            | vlernerad@cyberchimps.com         | Armenia                          | 2022-01-13
+  385 | Rozanna        | Solway            |                                   | Armenia                          | 2021-09-24
+  892 | Gwendolin      | Beeden            |                                   | Austria                          | 2021-12-21
+   73 | Georgetta      | OIlier            | goilier20@oakley.com              | Azerbaijan                       | 2022-03-15
+  181 | Lenard         | Von Salzberg      |                                   | Bahamas                          | 2021-06-19
+  312 | Aileen         | Toovey            |                                   | Belarus                          | 2022-05-12
+   42 | Cobby          | Nibloe            | cnibloe15@geocities.jp            | Belarus                          | 2021-06-17
+  870 | Claire         | Turbefield        | cturbefieldo5@nasa.gov            | Belarus                          | 2021-12-16
+   86 | Franzen        | Antrum            | fantrum2d@booking.com             | Belarus                          | 2021-11-11
+  737 | Robinson       | Livesley          |                                   | Benin                            | 2021-11-21
+  884 | Ax             | Appleyard         | aappleyardoj@ucla.edu             | Benin                            | 2021-10-22
+  714 | Pennie         | Jayume            | pjayumejt@list-manage.com         | Bolivia                          | 2022-04-23
+  863 | Dione          | Mac Giany         | dmacgianyny@bluehost.com          | Bolivia                          | 2022-06-01
+  470 | Rand           | Glowach           | rglowachd1@dagondesign.com        | Bosnia and Herzegovina           | 2021-09-20
+  120 | Cristionna     | Tremollet         |                                   | Bosnia and Herzegovina           | 2022-04-02
+   53 | Adrian         | Myrick            | amyrick1g@jalbum.net              | Botswana                         | 2021-10-27
+  802 | Patric         | Avramov           | pavramovm9@slideshare.net         | Botswana                         | 2021-06-20
+  789 | Bartholemy     | Ofield            | bofieldlw@clickbank.net           | Brazil                           | 2022-03-15
+  113 | Luella         | Seamans           | lseamans34@hp.com                 | Brazil                           | 2022-05-08
+   27 | Brinna         | Hammerman         |                                   | Brazil                           | 2021-12-13
+  486 | Lorrie         | Cool              | lcooldh@ebay.com                  | Brazil                           | 2021-06-17
+  296 | Marc           | Hellis            | mhellis87@google.cn               | Brazil                           | 2022-04-13
+  556 | Britte         | Cuttle            |                                   | Brazil                           | 2021-12-28
+  913 | Tracey         | O'Sculley         | tosculleypc@si.edu                | Brazil                           | 2021-07-10
+  908 | Gretchen       | Clohessy          | gclohessyp7@narod.ru              | Brazil                           | 2021-07-30
+  439 | Valaria        | Haggerstone       | vhaggerstonec6@deviantart.com     | Brazil                           | 2021-08-29
+  797 | Bay            | Paler             | bpalerm4@php.net                  | Brazil                           | 2021-11-28
+  340 | Gretal         | Keppy             | gkeppy9f@prnewswire.com           | Brazil                           | 2021-09-05
+  139 | Eve            | Burkinshaw        | eburkinshaw3u@1688.com            | Brazil                           | 2021-11-24
+   36 | Fleur          | Hull              | fhullz@stanford.edu               | Brazil                           | 2021-08-25
+   85 | Nariko         | Sedgefield        |                                   | Brazil                           | 2021-07-21
+  404 | Dorree         | Moring            | dmoringb7@techcrunch.com          | Brazil                           | 2021-07-16
+  552 | Elysha         | Speeding          | espeedingfb@seesaa.net            | Brazil                           | 2021-07-02
+  249 | Enriqueta      | Bausmann          | ebausmann6w@chron.com             | Brazil                           | 2021-06-10
+  959 | Cristabel      | Ormesher          | cormesherqm@tiny.cc               | Brazil                           | 2021-07-18
+  432 | Tanny          | Brecon            | tbreconbz@dyndns.org              | Brazil                           | 2021-09-13
+  567 | Fey            | Cowpe             | fcowpefq@nih.gov                  | Brazil                           | 2022-04-23
+  246 | Granville      | Dulwich           |                                   | Brazil                           | 2021-10-22
+  236 | Christy        | Rubin             | crubin6j@buzzfeed.com             | Brazil                           | 2021-10-16
+  230 | Orelle         | Doggerell         | odoggerell6d@yellowbook.com       | Brazil                           | 2022-06-05
+  468 | Neely          | Silverstone       | nsilverstonecz@clickbank.net      | Brazil                           | 2021-07-21
+  785 | Virgil         | Winstanley        |                                   | Brazil                           | 2021-07-17
+   95 | Kip            | Beevens           | kbeevens2m@ucoz.com               | Brazil                           | 2021-06-13
+  836 | Janela         | Lambrechts        | jlambrechtsn7@hibu.com            | Brazil                           | 2021-11-15
+  571 | Coleen         | Burle             | cburlefu@example.com              | Brazil                           | 2021-09-22
+  862 | Saba           | Caldeiro          |                                   | Brazil                           | 2022-04-17
+  692 | Bonny          | Rottcher          | brottcherj7@odnoklassniki.ru      | Brazil                           | 2021-07-27
+  473 | Pamela         | Neiland           |                                   | Brazil                           | 2021-08-19
+  759 | Elianore       | Ivanikov          | eivanikovl2@chronoengine.com      | Brazil                           | 2022-04-12
+  531 | Cale           | Lauks             |                                   | Brazil                           | 2021-06-25
+  761 | Brandyn        | Cornock           | bcornockl4@ebay.co.uk             | Brazil                           | 2022-03-07
+  766 | Dari           | Wagge             | dwaggel9@si.edu                   | Brazil                           | 2022-05-05
+  480 | Thebault       | Folli             |                                   | Brazil                           | 2022-02-04
+  932 | Monti          | Erett             | merettpv@mail.ru                  | Brazil                           | 2021-08-28
+  930 | Malvin         | Forte             |                                   | Brazil                           | 2022-01-17
+  712 | Lucias         | Hanton            | lhantonjr@amazonaws.com           | Brazil                           | 2022-04-19
+  928 | Georgetta      | Matussow          | gmatussowpr@fda.gov               | Brazil                           | 2021-12-30
+  585 | Jase           | Swanbourne        | jswanbourneg8@squidoo.com         | Bulgaria                         | 2022-02-21
+  776 | Lowell         | Arrighetti        | larrighettilj@amazon.com          | Bulgaria                         | 2022-04-19
+  224 | Rafaellle      | Tice              | rtice67@sohu.com                  | Bulgaria                         | 2021-08-22
+  256 | Coreen         | Conroy            | cconroy73@disqus.com              | Bulgaria                         | 2021-06-28
+  308 | Jolynn         | Habercham         | jhabercham8j@etsy.com             | Burkina Faso                     | 2021-11-12
+  686 | Galven         | Upex              | gupexj1@skyrock.com               | Cameroon                         | 2022-03-30
+  955 | Layla          | Halhead           |                                   | Canada                           | 2021-09-08
+  377 | Druci          | Matley            | dmatleyag@msu.edu                 | Canada                           | 2022-05-25
+  443 | Bambi          | Bewicke           | bbewickeca@ycombinator.com        | Canada                           | 2021-11-26
+  832 | Dev            | Corneliussen      |                                   | Canada                           | 2021-12-11
+   22 | Coraline       | Rudkin            | crudkinl@mapy.cz                  | Canada                           | 2021-09-28
+  125 | Corney         | Frizell           |                                   | Canada                           | 2022-02-22
+  962 | Rubia          | Drees             | rdreesqp@nba.com                  | Canada                           | 2021-12-08
+  303 | Goddart        | Hebard            |                                   | Canada                           | 2021-07-23
+  304 | Tucker         | Berthouloume      | tberthouloume8f@moonfruit.com     | Canada                           | 2022-02-20
+  794 | Rock           | Braunlein         | rbraunleinm1@t.co                 | Canada                           | 2022-02-02
+  157 | Lida           | McGuiness         | lmcguiness4c@ow.ly                | Canada                           | 2021-11-16
+  893 | Aidan          | Downer            |                                   | Canada                           | 2022-05-19
+  525 | Brittni        | Gammage           |                                   | Canada                           | 2021-12-20
+  894 | Rafferty       | Deverille         | rdeverilleot@over-blog.com        | Cape Verde                       | 2021-11-08
+  705 | Doug           | Camolli           | dcamollijk@posterous.com          | Central African Republic         | 2022-05-29
+  622 | Kayla          | Norres            | knorresh9@networkadvertising.org  | Chad                             | 2021-09-15
+  442 | Nessie         | Trivett           | ntrivettc9@usatoday.com           | Chad                             | 2021-11-18
+  648 | Iolande        | Lampel            | ilampelhz@parallels.com           | Chad                             | 2021-11-04
+  349 | Cristabel      | Aggs              |                                   | Chile                            | 2022-05-31
+  594 | Town           | Rolfi             | trolfigh@mtv.com                  | Chile                            | 2022-01-30
+    1 | Bobby          | Cary              | bcary0@usnews.com                 | Chile                            | 2021-09-01
+  326 | Jarib          | Muncer            |                                   | Chile                            | 2022-05-24
+  801 | Jori           | Wenn              | jwennm8@networkadvertising.org    | Chile                            | 2021-11-19
+  740 | Felicle        | Flury             | fflurykj@google.co.uk             | China                            | 2021-08-02
+  703 | Alyssa         | Dutton            |                                   | China                            | 2021-10-09
+  695 | Rosanna        | Bulbrook          |                                   | China                            | 2022-04-09
+  693 | Bartholomeo    | Shepton           |                                   | China                            | 2022-02-01
+  449 | Ive            | Klulik            |                                   | China                            | 2021-10-17
+   84 | Elfreda        | Rubinowicz        |                                   | China                            | 2022-04-20
+  453 | Laural         | Jerke             | ljerkeck@chronoengine.com         | China                            | 2022-04-14
+  454 | Rossie         | Titford           |                                   | China                            | 2022-03-19
+  455 | Jessamyn       | Ruscoe            | jruscoecm@xing.com                | China                            | 2021-09-22
+  458 | Maureene       | Walster           |                                   | China                            | 2022-05-19
+  460 | Wiatt          | Cree              | wcreecr@economist.com             | China                            | 2022-01-06
+   87 | Silvie         | Itzkovsky         | sitzkovsky2e@jugem.jp             | China                            | 2022-03-19
+  678 | Garv           | Hayen             |                                   | China                            | 2021-10-17
+  670 | Jania          | Noades            | jnoadesil@elegantthemes.com       | China                  
+
+
+
+
+Sorting by country in DESC order
+                                                 ^
+test_data=# SELECT * FROM mock_data ORDER BY country DESC;
+  id  |   first_name   |     last_name     |               email               |             country              | date_of_birth
+------+----------------+-------------------+-----------------------------------+----------------------------------+---------------
+  466 | Barbie         | Sharland          |                                   | Zimbabwe                         | 2022-05-07
+   74 | Vivia          | Gyngell           |                                   | Yemen                            | 2022-02-17
+  501 | Bartlet        | Deighton          | bdeightondw@mozilla.com           | Yemen                            | 2021-09-17
+  360 | Patrizia       | Dodgshon          | pdodgshon9z@wufoo.com             | Yemen                            | 2021-09-03
+   28 | Loria          | Penas             | lpenasr@state.gov                 | Yemen                            | 2021-07-30
+  167 | Juli           | Crowhurst         | jcrowhurst4m@phoca.cz             | Yemen                            | 2021-11-25
+  608 | Catina         | Grimmer           | cgrimmergv@naver.com              | Vietnam                          | 2022-03-01
+  100 | Tully          | Fenn              |                                   | Vietnam                          | 2021-09-20
+  856 | Humberto       | Mulholland        |                                   | Vietnam                          | 2021-09-01
+   31 | Bertie         | Pawley            |                                   | Vietnam                          | 2021-07-19
+  553 | Jackie         | Kilalea           |                                   | Vietnam                          | 2021-08-27
+  491 | Corny          | Swannie           |                                   | Vietnam                          | 2021-10-29
+  770 | Kendrick       | Meynell           | kmeynellld@smugmug.com            | Vietnam                          | 2021-12-14
+  602 | Wilmer         | Chillcot          |                                   | Vietnam                          | 2021-06-24
+  956 | Colman         | Bulfit            |                                   | Venezuela                        | 2021-12-10
+  228 | Lydon          | Rate              | lrate6b@nih.gov                   | Venezuela                        | 2022-02-08
+  564 | Shelden        | Steinson          |                                   | Uzbekistan                       | 2022-04-23
+  767 | Prince         | Egre              |                                   | Uzbekistan                       | 2021-07-24
+  399 | Shayna         | Mack              | smackb2@reverbnation.com          | Uzbekistan                       | 2021-09-06
+  911 | Taite          | Dowse             | tdowsepa@blogger.com              | Uruguay                          | 2021-08-23
+  937 | Giffie         | Freeberne         |                                   | Uruguay                          | 2021-07-03
+  508 | Bjorn          | Raggett           | braggette3@google.fr              | Uruguay                          | 2021-06-27
 
 
 
 
 
+sortig the data by id in reverse ;
+
+
+test_data=# SELECT * FROM mock_data ORDER BY id DESC;
+
+
+  id  |   first_name   |     last_name     |               email               |             country              | date_of_birth
+------+----------------+-------------------+-----------------------------------+----------------------------------+---------------
+ 1000 | Lucius         | Sautter           |                                   | Argentina                        | 2021-08-25
+  999 | Mersey         | Ketcher           | mketcherrq@ehow.com               | China                            | 2022-05-25
+  998 | Maryjane       | Lovejoy           | mlovejoyrp@t.co                   | Portugal                         | 2021-08-25
+  997 | Zelma          | Peasgood          | zpeasgoodro@techcrunch.com        | China                            | 2021-11-08
+  996 | Charmine       | Castell           | ccastellrn@cam.ac.uk              | Colombia                         | 2022-05-09
+  995 | Buiron         | Edowes            | bedowesrm@privacy.gov.au          | Indonesia                        | 2021-10-28
+  994 | Iorgo          | Kempshall         | ikempshallrl@oaic.gov.au          | United States                    | 2022-04-04
+  993 | Deena          | Snoddy            | dsnoddyrk@virginia.edu            | China                            | 2021-06-18
+  992 | Billye         | Whybrow           | bwhybrowrj@mashable.com           | Indonesia                        | 2021-07-12
+  991 | Audrie         | Crasswell         |                                   | Mali                             | 2021-06-25
+  990 | Hortensia      | Rustan            |                                   | Germany                          | 2022-03-24
+  989 | Say            | Wissby            | swissbyrg@bbc.co.uk               | Nigeria                          | 2021-12-06
+  988 | Angele         | Warburton         | awarburtonrf@sitemeter.com        | Indonesia                        | 2022-04-12
+  987 | Kimbell        | Haworth           | khaworthre@adobe.com              | Indonesia                        | 2021-10-23
+  986 | Lucius         | Marcoolyn         | lmarcoolynrd@pagesperso-orange.fr | China                            | 2021-07-07
+  985 | Alfred         | Dillestone        |                                   | China                            | 2021-08-21
+  984 | Nolana         | Lockhart          | nlockhartrb@tiny.cc               | Norway                           | 2022-03-14
+  983 | Dion           | Wraight           | dwraightra@google.com.au          | China                            | 2022-04-04
+  982 | Van            | Maharey           |                                   | China                            | 2021-06-30
+  981 | Floria         | Musprat           | fmuspratr8@google.ru              | New Zealand                      | 2021-08-01
+  980 | Lyell          | Stanyard          | lstanyardr7@1und1.de              | Philippines                      | 2021-08-04
+  979 | Leoline        | Elsy              |                                   | Indonesia                        | 2022-04-13
+-- More  --
 
 
 
+removing duplicate country using DISTINCT key word
+
+
+test_data=# SELECT DISTINCT country FROM mock_data ORDER BY country;
+             country
+----------------------------------
+ Afghanistan
+ Albania
+ American Samoa
+ Argentina
+ Armenia
+ Austria
+ Azerbaijan
+ Bahamas
+ Belarus
+ Benin
+ Bolivia
+ Bosnia and Herzegovina
+ Botswana
+ Brazil
+ Bulgaria
+ Burkina Faso
+ Cameroon
+ Canada
+ Cape Verde
+ Central African Republic
+ Chad
+ Chile
+ China
+ Colombia
+ Comoros
+ Croatia
+ Cuba
+ Cyprus
+ Czech Republic
+ Democratic Republic of the Congo
+ Denmark
+ Dominican Republic
+ East Timor
+ Ecuador
+ Egypt
+ El Salvador
+ Estonia
+ Ethiopia
+ Finland
+ France
+ Gabon
+ Gambia
+ Georgia
+ Germany
+ Greece
+ Greenland
+ Guatemala
+ Haiti
+ Honduras
+ Hungary
+ Indonesia
+ Iran
+ Ireland
+ Israel
+ Italy
+ Ivory Coast
+ Japan
+ Jordan
+ Kazakhstan
+ Kenya
+ Kiribati
+ Latvia
+ Lebanon
+ Lithuania
+ Luxembourg
+ Macedonia
+ Madagascar
+ Malaysia
+ Mali
+ Malta
+ Mauritius
+ Mexico
+ Micronesia
+ Moldova
+ Mongolia
+ Myanmar
+ Namibia
+ Nepal
+ Netherlands
+ New Caledonia
+ New Zealand
+ Nicaragua
+ Nigeria
+ North Korea
+ Norway
+ Oman
+ Pakistan
+ Palestinian Territory
+ Panama
+ Paraguay
+ Peru
+ Philippines
+ Poland
+ Portugal
+ Russia
+ Rwanda
+ Saint Martin
+ Saint Vincent and the Grenadines
+ Saudi Arabia
+ Serbia
+ Sierra Leone
+ Slovakia
+ Slovenia
+ South Africa
+ South Korea
+ Spain
+ Sri Lanka
+ Suriname
+ Swaziland
+ Sweden
+ Syria
+ Taiwan
+ Tajikistan
+ Tanzania
+ Thailand
+ Tunisia
+ Turkmenistan
+ Uganda
+ Ukraine
+ United Arab Emirates
+ United Kingdom
+ United States
+ Uruguay
+ Uzbekistan
+ Venezuela
+ Vietnam
+ Yemen
+ Zimbabwe
+(128 rows)
 
 
 
