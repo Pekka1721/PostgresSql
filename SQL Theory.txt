@@ -1,0 +1,7 @@
+Primary Key:
+
+Primary key is a value in our  coloum which uniquly identifies in any table
+
+ex: id of  a coloum 
+
+
